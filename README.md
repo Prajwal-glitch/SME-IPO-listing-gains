@@ -78,8 +78,12 @@ cd Scripts
 uv run uvicorn predict:app --host 0.0.0.0 --port 9696
 
 # Start Streamlit UI
+# Try running each server in different terminal
 uv run streamlit run streamlit_app.py
+
 ```
+
+
 ---
 
 ## 🐳 Run Using Docker
