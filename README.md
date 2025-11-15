@@ -17,7 +17,7 @@ The dataset includes publicly available SME IPO data scraped from [InvestorGain]
 
 The target variable:
 
-* **Listing Gain (%)** – 1 for listing gains else 0
+* **Listing Gain (Boolean value)** – 1 for listing gains else 0
 
 ---
 
