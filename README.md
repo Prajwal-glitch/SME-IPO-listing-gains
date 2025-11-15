@@ -72,13 +72,18 @@ uv sync --locked || uv sync
 
 
 ```bash
-cd Scripts
 
+# Try running each server in different terminal
+
+# First terminal 
 # Start FastAPI backend
+cd Scripts
 uv run uvicorn predict:app --host 0.0.0.0 --port 9696
 
+(optional - streamlit interface)
+# Second terminal
 # Start Streamlit UI
-# Try running each server in different terminal
+cd Scripts
 uv run streamlit run streamlit_app.py
 
 ```
