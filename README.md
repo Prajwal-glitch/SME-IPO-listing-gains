@@ -8,7 +8,7 @@ SME IPOs in India often witness sharp listing-day volatility. Retail investors s
 
 ## 📂 Dataset Description
 
-The dataset includes publicly available SME IPO data scraped from financial portals, containing:
+The dataset includes publicly available SME IPO data scraped from [InvestorGain](https://www.investorgain.com/), containing:
 
 * **Company financials** (Revenue, PAT, Assets)
 * **IPO details** (issue size, price band, subscription levels)
@@ -17,7 +17,7 @@ The dataset includes publicly available SME IPO data scraped from financial port
 
 The target variable:
 
-* **Listing Gain (%)** – % change between issue price and listing price
+* **Listing Gain (%)** – 1 for listing gains else 0
 
 ---
 
@@ -27,7 +27,7 @@ Key insights from the dataset:
 
 * High correlation between **subscription levels** and listing gains
 * Oversubscribed IPOs tend to exhibit stronger gains
-* Issue size and valuation multiples show non-linear relationships
+* Grey market premium and presence of anchor have highest feature importance
 * Clear presence of outliers due to SME market volatility
 
 EDA included:
@@ -46,7 +46,6 @@ Multiple ML models were trained and compared:
 * Linear Regression
 * Random Forest Regressor
 * XGBoost Regressor
-* Gradient Boosting
 
 **Evaluation Metrics:**
 
