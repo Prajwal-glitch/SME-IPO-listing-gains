@@ -70,7 +70,7 @@ cd SME-IPO-listing-gains
 uv sync --locked || uv sync
 ```
 
-Make sure you are at root of repo before executing below commands
+Before executing below commands make sure you are at root of repository : SME-IPO-listing-gains
 ```bash
 # Try running each server in different terminal
 
