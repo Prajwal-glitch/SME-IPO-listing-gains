@@ -70,9 +70,8 @@ cd SME-IPO-listing-gains
 uv sync --locked || uv sync
 ```
 
-
+Make sure you are at root of repo before executing below commands
 ```bash
-
 # Try running each server in different terminal
 
 # First terminal 
@@ -80,7 +79,10 @@ uv sync --locked || uv sync
 cd Scripts
 uv run uvicorn predict:app --host 0.0.0.0 --port 9696
 
-(optional - streamlit interface)
+```
+
+```bash
+
 # Second terminal
 # Start Streamlit UI
 cd Scripts
