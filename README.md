@@ -82,13 +82,13 @@ uv run uvicorn predict:app --host 0.0.0.0 --port 9696
 ### **1. Build Docker image**
 
 ```bash
-docker build -t sme-ipo-ml .
+docker build -t ipo-app .
 ```
 
 ### **2. Run container**
 
 ```bash
-docker run -p 8000:8000 sme-ipo-ml
+docker run -p 9696:9696 -p 8501:8501 ipo-app
 ```
 
 ---
@@ -98,11 +98,19 @@ docker run -p 8000:8000 sme-ipo-ml
 ### **Endpoint: POST /predict**
 
 ```json
+
 {
-  "issue_size": 42,
-  "subscription": 110.5,
-  "revenue_growth": 18.2,
-  "pat_margin": 12.5
+'issue_amount_(rs.cr.)': 69.54,
+'assets_(rs.cr.)': 117.0,
+'revenue_(rs.cr.)': 620.16,
+'profit_after_tax_(rs.cr.)': 19.47,
+'net_worth_(rs.cr.)': 61.23,
+'reserves_and_surplus_(rs.cr.)': 44.57,
+'total_borrowing_(rs.cr.)': 0.16,
+'issue_price_(rs)': 122,
+'sub': 4.11,
+'gmp': 1.0,
+'anchor': 1.0
 }
 ```
 
@@ -129,7 +137,7 @@ docker run -p 8000:8000 sme-ipo-ml
 * Integrate **real-time market sentiment** (Twitter, news, IPO grey market)
 * Add **explainable AI** (SHAP values)
 * Build Streamlit dashboard
-* Deploy full API on Fly.io or Railway
+* Deploy full API on Fly.io or AWS
 
 ---
 
